@@ -1,0 +1,8 @@
+﻿Questions
+2/21/2022
+1. As the answer to the first exercise, list the name(s) of the people who worked together on this lab.
+Drew Sadler, Cori Diaz, Abhinav Kumar
+2. Describe any known bugs or ways that your submission deviates from the above specification.
+No bugs or issues known.
+3. Indicate which, if any, extra credit exercises you have attempted.
+        No.
