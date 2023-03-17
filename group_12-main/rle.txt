@@ -1,0 +1,32 @@
+1. Drew Sadler, Abhinav Kumar, Cori Diaz
+
+2. Compressing works well when you have a long string of consecutive
+    letters that are grouped together consecutively, or convenient for 
+    the compression interval the user chose for the program :
+        E.x:  AAAABBBBBBBBCCCCCCCCCCCCAAAAAAAAAAAAAAAA
+    Turns into 4A8B12C16A, Making a 40 byte line into 8 bytes
+    Although performs poorly when facing a large string of characters 
+    isolated from one another. With groupings of strings of 1 or 2, causing 
+    cases where it actual expands the amount of bytes
+        E.x: ABCBACBBBABABABCAABCBCACABC
+    Turning into 1A1B1C1B1A1C3B1A1B1A1B1A1B1C2A1B1C1B1C1A1C1A1B1C. 
+    Making 27 bytes into 48, proving way less efficient.
+
+3.  The 1mil_strong_bias will most likely compress the best.
+    1mil_random : Before(1000000 bytes) After ( 1598827),  Ratio(0.625)
+    1mil_weak_bias: Before(1000000 bytes) After (851463 ), Ratio(1.17)
+    1mil_strong_bias: Before(1000000 bytes) After ( 409083), Ratio (2.44 )
+
+4.  real    0m8.783s
+    user    0m0.396s
+    sys    0m8.382s
+
+5.  real    0m0.909s
+    user    0m0.053s
+    sys    0m0.857s
+    The read and write appear less frequently so the system calls are made 
+    less frequently overall. Able to run faster due to the lower amount of 
+    system calls and using function calls instead.
+
+6.  None.
+
