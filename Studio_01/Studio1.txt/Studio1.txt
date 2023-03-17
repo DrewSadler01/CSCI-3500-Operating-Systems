@@ -1,0 +1,16 @@
+CSCI 3500: Studio 1
+1.Drew Sadler
+2.#include <stdio.h>
+3.Fprintf contains an extra signature of (FILE *stream)
+4.The functions printf() write output to stdout, the standard output stream. fprintf() write output to the given output stream.
+5.[asadler1@hopper3 hello_fprintf.c]$ ./hello_fprintf
+Hello, world!
+6. 2   System calls (functions provided by the kernel)
+7. #include <unistd.h>
+ssize_t write(int fd, const void *buf, size_t count);
+8. 
+9.[asadler1@hopper3 hello_fprintf.c]$ ./hello_write
+Hello, world!
+10.It gives me a warning that it is out of the byte size of my object, It has to give a warning since it would not be able to grab any data to output past the object size and would just crash anyway if let pass.
+11.C library function situation: in a case where you could be working with multiple developers that may have different models and or operating systems than you, so large collaborative projects.  
+OS system call situation: For developers that may want to work on operating system specific issues within the system, or small local projects that may only be for one person to work on or only people under that operating system to use. For example Windows has many exclusive games on the OS due to Microsoft being a developer.
